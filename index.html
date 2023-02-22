@@ -20,30 +20,34 @@
                 <div class="col">
                     <h3 class="title">billing address</h3>
                     <div class="inputbox">
-                        <span>full name:</span>
-                        <input type="text" placeholder="mr sunday victor">
+                        <label>full name:</label>
+                        <input type="text" placeholder="mr sunday victor" id="contact-name"
+                        onkeyup="validateName()" required>
+                        <span id="name-error"></span>
                     </div>
                     <div class="inputbox">
-                        <span>email address:</span>
-                        <input type="email" placeholder="example@jaycodexx.com">
+                        <label>email address:</label>
+                        <input type="email" placeholder="example@jaycodexx.com" id="contact-email" 
+                        onkeyup="validateEmail" required>
+                        <span id="email-error"></span>
                     </div>
                     <div class="inputbox">
-                        <span>address:</span>
-                        <input type="text" placeholder="house - street - locality">
+                        <label>address:</label>
+                        <input type="text" placeholder="house - street - locality" required>
                     </div>
                     <div class="inputbox">
-                        <span>city:</span>
-                        <input type="text" placeholder="nsukka">
+                        <label>city:</label>
+                        <input type="text" placeholder="nsukka" required>
                     </div>
 
                     <div class="flex">
                         <div class="inputbox">
-                            <span>state:</span>
-                            <input type="text" placeholder="enugu">
+                            <label>state:</label>
+                            <input type="text" placeholder="enugu" required>
                         </div>
                         <div class="inputbox">
-                            <span>zip code:</span>
-                            <input type="text" placeholder="410100">
+                            <label>zip code:</label>
+                            <input type="text" placeholder="410100" required>
                         </div>
                     </div>
                 </div>
@@ -51,37 +55,50 @@
                 <div class="col">
                     <h3 class="title">payment</h3>
                     <div class="inputbox">
-                        <span>accepted cards:</span>
+                        <label>accepted cards:</label>
                         <img src="./images/card_img.png" alt="">
                     </div>
                     <div class="inputbox">
-                        <span>name on card:</span>
-                        <input type="text" placeholder="mr. sunday victor">
+                        <label>name on card:</label>
+                        <input type="text" placeholder="mr. sunday victor" required>
+                        <span id="card-error"></span>
                     </div>
                     <div class="inputbox">
-                        <span>card number:</span>
-                        <input type="number" placeholder="1234 1244 1255 1266">
+                        <label>card number:</label>
+                        <input type="number" placeholder="1234 1244 1255 1266"
+                        id="card-number" 
+                        onkeyup="validateCard" required>
+                        <span id="card-number-error"></span>
                     </div>
                     <div class="inputbox">
-                        <span>exp month:</span>
-                        <input type="text" placeholder="april">
+                        <label>exp month:</label>
+                        <input type="text" placeholder="april" required>
+                        <span id="exp-month-error"></span>
                     </div>
 
                     <div class="flex">
                         <div class="inputbox">
-                            <span>exp year:</span>
-                            <input type="number" placeholder="2026">
+                            <label>exp year:</label>
+                            <input type="number" placeholder="2026" required>
+                            <span id="exp-year-error"></span>
                         </div>
                         <div class="inputbox">
-                            <span>CVV:</span>
-                            <input type="text" placeholder="123">
+                            <label>CVV:</label>
+                            <input type="text" placeholder="123" required>
+                            <span id="cvv-error"></span>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <input type="submit" value="check out" class="submit">
+            <button onclick="return validateForm()">
+                <input type="submit" value="check out" class="submit">
+            <span id="submit-error"></span>
+            </button>
+            
         </form>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -39,8 +39,9 @@ form{
 }
 .inputbox{
     margin: 15px 0;
+    position: relative;
 }
-span{
+label{
     margin-bottom: 10px;
     display: block;
 }
@@ -80,4 +81,21 @@ form .submit{
 .submit:hover{
     background: #333;
     color: whitesmoke;
+}
+button{
+    width: 100%;
+}
+/* ######## error ########## */
+.inputbox span{
+    width: 100%;
+    padding: 0 50px;
+    position: absolute;
+    bottom: 12px;
+    right: 17px;
+    font-size: 14px;
+    color: #fff;
+    background: red;
+}
+#submit-error{
+    color: red;
 }
